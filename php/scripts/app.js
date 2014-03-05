@@ -65,12 +65,13 @@
   };
 
   parseFeed = function(feed) {
-    var data, date, entry, html, items, k;
+    var data, date, entry, html, items, k, link;
     items = $('#items');
     $('#loader').hide();
     entries = feed.entries;
     items.html("");
     for (k in entries) {
+      console.log(k);
       entry = entries[k];
       date = new Date(entry.publishedDate);
       entry.date = formatDate(date);
@@ -82,8 +83,10 @@
       };
       html = getTemplate('item', data);
       items.append(html);
-      items.find('#title_link_' + k).on('click', function() {
-        return openArticle($(this), k);
+      link = items.find('#title_link_' + k);
+      link.data('article-id', k);
+      link.on('click', function() {
+        return openArticle($(this));
       });
     }
     return items.find('.title_link').button().button('refresh');
@@ -94,8 +97,10 @@
   */
 
 
-  window.openArticle = function(ob, key) {
-    var categories, content, entry, link, subtitle, subtitle_html, title;
+  window.openArticle = function(ob) {
+    var categories, content, entry, key, link, subtitle, subtitle_html, title;
+    key = ob.data('article-id');
+    console.log("Opening article " + key);
     if (!(key in entries)) {
       alert("Възникна грешка! Моля, опитайте отново.");
       $.mobile.changePage($("#home"));

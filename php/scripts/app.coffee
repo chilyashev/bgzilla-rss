@@ -54,21 +54,25 @@ parseFeed = (feed) ->
   entries = feed.entries
   items.html("")
   for k of entries
+    console.log(k)
     entry = entries[k]
     date = new Date(entry.publishedDate)
     entry.date = formatDate(date)
     data = {title: entry.title, link: entry.link, date: entry.date, key: k}
     html = getTemplate('item', data)
     items.append(html)
-    items.find('#title_link_'+k).on('click', () ->
-
-                                  openArticle($(@), k))
+    link = items.find('#title_link_'+k)
+    link.data('article-id', k)
+    link.on('click', () ->
+      openArticle($(@)))
   items.find('.title_link').button().button('refresh')
 
 ###
   Opens the article
 ###
-window.openArticle = (ob, key) ->
+window.openArticle = (ob) ->
+  key = ob.data('article-id')
+  console.log("Opening article #{key}")
   if !(key of entries)
     alert("Възникна грешка! Моля, опитайте отново.")
     $.mobile.changePage ($("#home"))
