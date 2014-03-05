@@ -1,8 +1,6 @@
-timeout = 300000
-# Timeout in seconds
+timeout = 300000 # Timeout in seconds
 feed_url = "http://bgzilla.org/feed/"
-entries =
-{}
+entries = {}
 
 formatDate = (date) ->
   day = ('0' + date.getDate()).slice(-2)
@@ -33,7 +31,10 @@ doStuff = (url) ->
   #TODO: Figure out a way to use something other than google's feed proxy. Maybe host my own?
   feed = 'https://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent(url)
   $.ajax({
-         url: feed
+         url: feed,
+         xhrFields: {
+           mozSystem: true
+         },
          dataType: 'json',
          timeout: timeout,
          success: (data) ->
