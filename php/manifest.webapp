@@ -1,7 +1,7 @@
 {
-    "version": "0.3",
+    "version": "0.4",
     "name": "Новини от Mozilla България",
-    "launch_path": "/bgzilla-rss/index.html",
+    "launch_path": "/index.html",
     "description": "Последните новини от българската общност на Mozilla",
     "icons": {
         "16":  "/bgzilla-rss/app-icons/icon-16.png",
