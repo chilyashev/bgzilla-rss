@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+    <title>Последни новини от Mozilla България</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/jquery.mobile.css">
+    <link rel="stylesheet" href="styles/app.css">
+</head>
+<body>
+
+<div data-role="page" id="home">
+    <header data-role="header" data-theme="b" data-position="fixed">
+        <h1 class="ui-title" role="heading">Новини от Mozilla България</h1>
+
+        <div class="ui-btn-right" data-role="controlgroup" data-type="horizontal">
+            <a href="#" id="refresh" data-role="button" data-icon="refresh">Обнови</a>
+        </div>
+    </header>
+
+    <div data-role="content">
+        <h3>Последни новини от Mozilla България</h3>
+
+        <div id="items">
+
+        </div>
+        <div id="loader" style="display: none"><img src="styles/images/ajax-loader.gif" alt="Зареждане..." style="height: 16px"/> Зареждане...</div>
+        <div id="load_error" style="display: none">Грешка при зареждането, моля опитайте отново.</div>
+    </div>
+</div>
+
+<div data-role="page" id="view-entry" data-add-back-btn="true" data-back-btn-text="Назад">
+
+    <div data-role=header data-theme="b" data-position="fixed">
+        <h1 class="entry_title"></h1>
+    </div>
+
+    <div data-role="content" class="content">
+        <h2 class="entry_title"></h2>
+
+        <div class="entry_subtitle"></div>
+        <div class="entry_content"></div>
+        <div class="entry_categories"></div>
+        <a href="" class="entry_link" data-role="button">Към статията</a>
+    </div>
+
+</div>
+
+
+<!-- item "template" -->
+<div id="item" style="display: none">
+    <div class="entry">
+        <div class="title"><a name="%title%"></a><a class="title_link" data-role="button" href="#"
+                                                    id="title_link_%key%">%date%: %title%</a></div>
+    </div>
+</div>
+<!-- /item "template" -->
+<script src="scripts/jquery.js"></script>
+<script src="scripts/app.js"></script>
+<script src="scripts/jquery.mobile.js"></script>
+</body>
+</html>
+

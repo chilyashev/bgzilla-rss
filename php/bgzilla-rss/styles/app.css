@@ -1,0 +1,26 @@
+.entry {
+  width: 100%; }
+  .entry .title {
+    margin-bottom: 3px;
+    width: 100%; }
+    .entry .title a {
+      text-decoration: none;
+      width: 100%;
+      display: block; }
+  .entry .content {
+    display: none; }
+
+#view-entry .content .entry_title {
+  width: 100%;
+  display: block;
+  border-bottom: 1px solid black;
+  margin-bottom: 3px; }
+#view-entry .content .entry_subtitle {
+  font-size: xx-small; }
+#view-entry .content .entry_link {
+  display: block; }
+#view-entry .content .entry_categories {
+  width: 100%;
+  border-bottom: 1px solid black;
+  font-size: x-small;
+  display: block; }

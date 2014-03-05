@@ -1,0 +1,37 @@
+{
+    "version": "0.3",
+    "name": "Новини от Mozilla България",
+    "launch_path": "/bgzilla-rss/index.html",
+    "description": "Последните новини от българската общност на Mozilla",
+    "icons": {
+        "16":  "/bgzilla-rss/app-icons/icon-16.png",
+        "32":  "/bgzilla-rss/app-icons/icon-32.png",
+        "60":  "/bgzilla-rss/app-icons/icon-60.png",
+        "90":  "/bgzilla-rss/app-icons/icon-90.png",
+        "120": "/bgzilla-rss/app-icons/icon-120.png",
+        "250": "/bgzilla-rss/app-icons/icon-250.png"
+    },
+    "developer": {
+        "name": "Mihail Chilyashev",
+        "url": "http://chilyashev.com"
+    },
+    "locales": {
+        "bg": {
+            "description": "Последните новини от българската общност на Mozilla",
+            "developer": {
+                "url": "http://chilyashev.com"
+            }
+        },
+        "en": {
+            "description": "Latest news from Mozilla's Bulgarian community",
+            "developer": {
+                "url": "http://chilyashev.com"
+            }
+        }
+    },
+    "default_locale": "bg",
+    "type": "privileged",
+    "permissions": {
+        "systemXHR": { "description": "Required to make Ajax Calls over the Network" }
+    }
+}
