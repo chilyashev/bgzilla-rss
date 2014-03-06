@@ -11,7 +11,7 @@ if (isset($_REQUEST['f'])) {
     if (isImageName($_REQUEST['f']) && is_file($dataDir . $_REQUEST['f'])) {
 
         // set content type if a legal image extention
-        $file = $dataDir . $_REQUEST['f'];
+        $file = $dataDir . 'app-icons/' . $_REQUEST['f'];
         if (preg_match('/\.gif$/i',$file)) {
             header('Content-Type: image/gif');
         } else if (preg_match('/\.jpe?g$/i',$file)) {
