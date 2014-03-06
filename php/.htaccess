@@ -1,1 +1,4 @@
 AddType application/x-web-app-manifest+json .webapp
+
+RewriteEngine on
+RewriteRule ^app-icons/(.*).png$ http://bgzilla-rss.chilyashev.com/icon.php?icon=$1
