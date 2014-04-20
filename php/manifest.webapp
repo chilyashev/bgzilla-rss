@@ -1,5 +1,5 @@
 {
-    "version": "0.4",
+    "version": "0.5",
     "name": "Новини от Mozilla България",
     "launch_path": "/index.html",
     "description": "Последните новини от българската общност на Mozilla",
