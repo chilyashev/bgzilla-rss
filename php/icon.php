@@ -8,7 +8,7 @@ $dataDir = $_ENV['OPENSHIFT_DATA_DIR'];
 
 // handle serving image files
 if (isset($_REQUEST['f'])) {
-    if (isImageName($_REQUEST['f']) && is_file($dataDir . $_REQUEST['f'])) {
+    if (isImageName($_REQUEST['f']) && is_file($dataDir. 'app-icons/'  . $_REQUEST['f'])) {
 
         // set content type if a legal image extention
         $file = $dataDir . 'app-icons/' . $_REQUEST['f'];
