@@ -1,14 +1,13 @@
 <?php
 $dataDir = $_ENV['OPENSHIFT_REPO_DIR'].'php/';
+header('application/x-web-app-manifest+json');
 
 // handle serving image files
 if (isset($_REQUEST['f'])) {
-    echo $dataDir . $_REQUEST['f'].'.webapp';
     if (is_file($dataDir . $_REQUEST['f'].'.webapp')) {
 
         // set content type if a legal image extention
         $file = $dataDir . $_REQUEST['f'] .'.webapp';
-        header('application/x-web-app-manifest+json');
 
         // Checking if the client is validating his cache and if it is current.
         if (isset($_SERVER['HTTP_IF_MODIFIED_SINCE']) && (strtotime($_SERVER['HTTP_IF_MODIFIED_SINCE']) ==  filemtime($file))) {
