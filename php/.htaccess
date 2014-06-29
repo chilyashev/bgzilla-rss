@@ -4,4 +4,4 @@ AddType application/json .json
 RewriteEngine on
 RewriteRule ^app-icons/(.*)$ http://bgzilla-rss.chilyashev.com/icon.php?f=$1
 #RewriteRule ^*.webapp$ http://bgzilla-rss.chilyashev.com/webapp.php?f=$1
-RewriteRule ^(.*)\.webapp$ http://bgzilla-rss.chilyashev.com/webapp.php?f=$1 [L,P,NC]
+RewriteRule ^(.*)\.webapp$ http://bgzilla-rss.chilyashev.com/webapp.php?f=$1 [L,NC]
