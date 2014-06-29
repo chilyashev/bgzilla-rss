@@ -1,6 +1,6 @@
 <?php
 $dataDir = $_ENV['OPENSHIFT_REPO_DIR'].'php/';
-header('application/x-web-app-manifest+json');
+header('Content-Type: application/x-web-app-manifest+json');
 
 // handle serving image files
 if (isset($_REQUEST['f'])) {
