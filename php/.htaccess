@@ -1,8 +1,7 @@
-Options +FollowSymLinks -MultiViews
+AddType "application/x-web-app-manifest+json" .webapp
 AddType application/json .json
-#AddType application/x-web-app-manifest+json .webapp
 
 RewriteEngine on
 RewriteRule ^app-icons/(.*)$ http://bgzilla-rss.chilyashev.com/icon.php?f=$1
 #RewriteRule ^*.webapp$ http://bgzilla-rss.chilyashev.com/webapp.php?f=$1
-RewriteRule ^(.*)\.webapp$ http://bgzilla-rss.chilyashev.com/webapp.php?f=$1 [L,NC]
+#RewriteRule ^(.*)\.webapp$ http://bgzilla-rss.chilyashev.com/webapp.php?f=$1 [L,NC]
