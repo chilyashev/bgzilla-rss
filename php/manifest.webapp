@@ -33,6 +33,9 @@
     "permissions": {
         "systemXHR": {
             "description": "Required to make Ajax Calls over the Network"
+        },
+	"MozActivity": {
+            "description": "Required to make the links in the articles open with the browser."
         }
     }
 }
