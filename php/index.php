@@ -5,7 +5,7 @@
     <title></title>
     <script type="text/javascript">
         function installApp(){
-            var manifestUrl = 'http://board.chilyashev.com/dev/openshift/bgzillarss/php/manifest.webapp';
+            var manifestUrl = '//bgzilla-rss.chilyashev.com/manifest.webapp';
             var request = window.navigator.mozApps.install(manifestUrl);
             request.onsuccess = function () {
                 // Save the App object that is returned
@@ -22,7 +22,7 @@
 <body>
 <div id="install">
 	<a href="javascript:" onclick="installApp();">
-	<img src="app-icons/icon-128.png" /><br/>
+	<img src="app-icons/icon-120.png" /><br/>
 	Install
 	</a>
 </div>
