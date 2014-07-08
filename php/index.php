@@ -5,7 +5,7 @@
     <title></title>
     <script type="text/javascript">
         function installApp(){
-            var manifestUrl = '//bgzilla-rss.chilyashev.com/manifest.webapp';
+            var manifestUrl = 'http://bgzilla-rss.chilyashev.com/manifest.webapp';
             var request = window.navigator.mozApps.install(manifestUrl);
             request.onsuccess = function () {
                 // Save the App object that is returned
