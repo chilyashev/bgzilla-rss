@@ -34,7 +34,7 @@
         "systemXHR": {
             "description": "Required to make Ajax Calls over the Network"
         },
-	"MozActivity": {
+	"mozActivity": {
             "description": "Required to make the links in the articles open with the browser."
         }
     }
